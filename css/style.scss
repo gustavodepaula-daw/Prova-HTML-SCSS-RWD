@@ -1,0 +1,208 @@
+/* imports */
+
+@import url('https://fonts.googleapis.com/css?family=Cinzel:900');
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Raleway:200i');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:100');
+@import url('https://fonts.googleapis.com/css?family=Sirin+Stencil');
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script:700');
+@import url('https://fonts.googleapis.com/css?family=Pangolin');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300i');
+
+@import 'mixins';
+
+/* variaveis */
+
+$primary-color: #F0F0F0;
+$resumo-color: black;
+$footer-color: #F8F8F8;
+$social-color: #C0C0C0;
+$secondary-color: #101010;
+$background-color: white;
+//$social-color: #B0B0B0;
+
+
+/* gerais */
+
+.clearfix {
+    overflow: auto;
+    zoom: 1;
+}
+
+body {
+    max-width: 100%;
+    @include flush--ends;
+    @include flush--sides;   
+    background-color: $background-color;
+}
+
+
+/* Resumo */
+#resumo {
+    color: white;
+    line-height: 10%;
+    font-family: 'Raleway', sans-serif;
+    @include cf;
+}
+
+#nome {
+    font-size: 6vw;
+}
+
+#ola {
+    padding-top: 3%;
+    font-weight: 200;
+    font-style: italic;
+    font-size: 2.4vw;
+}
+
+#resumo {
+    width: 100%;
+    background-color: black;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+}
+
+#resumo p {
+    line-height: 100%;
+    margin: 2px;
+}
+
+#resumo img {
+    display: block;
+    width: 30%;
+    height: 30%;
+    margin: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-border-radius: 99em;
+    -moz-border-radius: 99em;
+    border-radius: 99em;
+    border: 6px solid #fff;
+    box-shadow: 0 3px 2px rgba(0, 0, 0, 0.1);
+}
+
+#resumo h1 {
+    color: white;
+}
+
+#resumo p {
+    color: white;
+    padding-left: 2%;
+}
+
+/* main */
+#atual {
+    padding: 0.3%;
+    color: white;
+    background-color: $secondary-color;
+}
+
+#main {
+    @include cf;
+    background-color: $primary-color;
+    padding: 2% 5% 2% 5%;
+}
+
+#main h1 {
+    margin: 0 0 1% 0;
+    font-family: 'Roboto Slab', serif;
+    font-size: 4.5vw;
+}
+
+#main h2 {
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    font-size: 3vw;
+}
+
+#main h3 {
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    font-size: 2vw;
+}
+
+#main h4 {
+    font-family: 'Ubuntu', sans-serif;
+    margin: .5% 0 3% 0;
+    font-style: italic;
+    font-size: 2vw;
+}
+
+#main ul {
+    display: table;
+    margin: 3% auto 3% auto;
+    text-align: center;
+    list-style-type: none;
+}
+
+#main li {
+    padding: 10%;
+    background-color: $social-color;
+    color: white;
+    display: inline;
+    margin: 10%;
+    -webkit-border-radius: 99em;
+    -moz-border-radius: 99em;
+    border-radius: 99em;
+    border: 6px solid #fff;
+    box-shadow: 0 3px 2px rgba(0, 0, 0, 0.1);
+    transition: background-color .5s;
+}
+
+#main li:hover {
+    background-color: black;
+}
+
+/* social */
+#social {
+    background-color: $social-color;
+    padding: 2% 5% 2% 5%;
+}
+
+#social h1 {
+    margin: 0 0 1% 0;
+    font-family: 'Roboto Slab', serif;
+    font-size: 4.5vw;
+}
+
+#social ul {
+    list-style-type: none;
+    padding-top: 2%;
+    padding-bottom: 5%;
+}
+
+#social li {
+    display: inline;
+    margin: 10%;
+}
+
+#social li img {
+    width: 10%;
+    height: 10%;
+    border-radius: 50%;
+}
+
+/* footer */
+footer {
+    text-align: right;
+    background-color: #F8F8F8;
+}
+
+footer p {
+    margin: 0;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    font-family: 'Pangolin', cursive;
+
+}
+
+/* Responsividade */
+
