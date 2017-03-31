@@ -178,12 +178,12 @@ body {
 
 /* social */
 #social {
-
     background-color: $social-color;
-    padding: 2% 5% 2% 5%;
+    //padding: 2% 5% 2% 5%;
 }
 
 #social h1 {
+    text-align: center;
     margin: 0 0 1% 0;
     font-family: 'Roboto Slab', serif;
     font-size: 4.5vi;
@@ -244,6 +244,11 @@ footer p {
             margin-bottom:-99999px;
         }
     }
+    #social{
+        float: left;
+        @include cf;
+    }
+
     #edu {
         @include cf;
         float: left;

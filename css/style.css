@@ -370,10 +370,10 @@ body {
 
 /* social */
 #social {
-  background-color: #C0C0C0;
-  padding: 2% 5% 2% 5%; }
+  background-color: #C0C0C0; }
 
 #social h1 {
+  text-align: center;
   margin: 0 0 1% 0;
   font-family: 'Roboto Slab', serif;
   font-size: 4.5vi; }
@@ -629,6 +629,13 @@ footer p {
     padding: 1%;
     padding-bottom: 99999px;
     margin-bottom: -99999px; }
+
+  #social {
+    float: left; }
+    #social::after {
+      content: '';
+      display: table;
+      clear: both; }
 
   #edu {
     float: left; }
