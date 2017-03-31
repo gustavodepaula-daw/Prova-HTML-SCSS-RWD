@@ -22,7 +22,7 @@ $resumo-color: black;
 $footer-color: #F8F8F8;
 $social-color: #C0C0C0;
 $secondary-color: #101010;
-$background-color: white;
+$background-color: black;
 //$social-color: #B0B0B0;
 
 
@@ -37,36 +37,44 @@ body {
     max-width: 100%;
     @include flush--ends;
     @include flush--sides;   
-    background-color: $background-color;
+    background-color: $secondary-color;
 }
 
-
+#tudo {
+    overflow: hidden;
+    max-width: 970px;
+    background-color: $background-color;
+    @include cf;
+    margin: auto;
+}
 /* Resumo */
 #resumo {
+    padding: 2%;
     color: white;
-    line-height: 10%;
     font-family: 'Raleway', sans-serif;
     @include cf;
+    background-color: black;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    float: left;
 }
 
 #nome {
-    font-size: 6vw;
+    font-size: 250%;
+    font-size: 8vi;
+    line-height: 90%;
+    margin: 0;
+    margin-bottom: 10%;
 }
 
 #ola {
     padding-top: 3%;
     font-weight: 200;
     font-style: italic;
-    font-size: 2.4vw;
-}
-
-#resumo {
-    width: 100%;
-    background-color: black;
-    padding-top: 5%;
-    padding-bottom: 5%;
-    font-family: 'Raleway', sans-serif;
-    text-align: center;
+    font-size: 2.4vi;
+    margin: 0;
 }
 
 #resumo p {
@@ -76,8 +84,8 @@ body {
 
 #resumo img {
     display: block;
-    width: 30%;
-    height: 30%;
+    width: 50%;
+    height: 50%;
     margin: auto;
     background-size: cover;
     background-repeat: no-repeat;
@@ -106,34 +114,39 @@ body {
 }
 
 #main {
+    overflow: hidden;
     @include cf;
     background-color: $primary-color;
-    padding: 2% 5% 2% 5%;
+    float: right;
+}
+
+#containermain {
+    padding: 1% 3% 2% 3%;
 }
 
 #main h1 {
     margin: 0 0 1% 0;
     font-family: 'Roboto Slab', serif;
-    font-size: 4.5vw;
+    font-size: 4.5vi;
 }
 
 #main h2 {
     font-family: 'Ubuntu', sans-serif;
     margin: 0;
-    font-size: 3vw;
+    font-size: 3vi;
 }
 
 #main h3 {
     font-family: 'Ubuntu', sans-serif;
     margin: 0;
-    font-size: 2vw;
+    font-size: 2vi;
 }
 
 #main h4 {
     font-family: 'Ubuntu', sans-serif;
     margin: .5% 0 3% 0;
     font-style: italic;
-    font-size: 2vw;
+    font-size: 2vi;
 }
 
 #contec li {
@@ -151,6 +164,7 @@ body {
 
     width: 20%;
     transition: all .5s ease-in-out;
+    display: inline-block;
 }
 
 #contec li:hover {
@@ -164,6 +178,7 @@ body {
 
 /* social */
 #social {
+
     background-color: $social-color;
     padding: 2% 5% 2% 5%;
 }
@@ -171,7 +186,7 @@ body {
 #social h1 {
     margin: 0 0 1% 0;
     font-family: 'Roboto Slab', serif;
-    font-size: 4.5vw;
+    font-size: 4.5vi;
 }
 
 #social ul {
@@ -193,6 +208,7 @@ body {
 
 /* footer */
 footer {
+    background: white;
     text-align: right;
     background-color: #F8F8F8;
 }
@@ -202,7 +218,43 @@ footer p {
     padding-top: 2%;
     padding-bottom: 2%;
     font-family: 'Pangolin', cursive;
-
 }
 
 /* Responsividade */
+
+
+@media screen and (min-width: 648px) and (max-width: 959px){
+    @for $i from 1 to 17{
+        .colt-#{$i}{
+            width: ((100 / 16) * $i) - 2%;
+            float:left;
+            padding:1%;
+            padding-bottom:99999px;
+            margin-bottom:-99999px;
+        }
+    }
+}
+@media screen and (min-width: 960px){
+    @for $i from 1 to 17{
+        .cold-#{$i}{
+            width: ((100 / 16) * $i) - 2%;
+            float:left;
+            padding:1%;
+            padding-bottom:99999px; 
+            margin-bottom:-99999px;
+        }
+    }
+    #edu {
+        @include cf;
+        float: left;
+    }
+
+    #contec {
+        @include cf;
+        float: right;
+    }
+}
+
+
+
+
